@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>sopra</OriginalElement>
+  <nodes>
+    <node x="1821.0" y="1995.0">sopra.model.entities.items.Recipe.RecipeType</node>
+    <node x="1218.5" y="2655.0">sopra.model.Room</node>
+    <node x="633.0" y="783.0">sopra.model.entities.Workbench</node>
+    <node x="3303.5" y="122.0">sopra.utils.JSONSerializable</node>
+    <node x="1316.5" y="1317.0">sopra.model.entities.Player</node>
+    <node x="2475.5" y="2655.0">sopra.controller.command.Command</node>
+    <node x="2153.5" y="2793.0">sopra.controller.command.action.Action</node>
+    <node x="3561.5" y="2050.5">sopra.model.entities.items.SwordPart</node>
+    <node x="2588.5" y="1962.0">sopra.model.entities.items.Recipe.RecipeContainer</node>
+    <node x="3107.5" y="2084.0">sopra.model.entities.items.Recipe.RecipeFactory</node>
+    <node x="4061.5" y="1962.0">sopra.model.entities.items.Decoction</node>
+    <node x="3060.5" y="2655.0">sopra.comm.CommandFactoryImpl</node>
+    <node x="1580.5" y="2655.0">sopra.controller.Config</node>
+    <node x="510.5" y="0.0">sopra.model.entities.Entity</node>
+    <node x="1884.5" y="1416.0">sopra.model.entities.items.Weapon</node>
+    <node x="656.0" y="2655.0">sopra.controller.visitor.DefaultEntityVisitor</node>
+    <node x="3341.5" y="1995.5">sopra.model.entities.items.Jewel</node>
+    <node x="716.5" y="1493.0">sopra.model.entities.Monster</node>
+    <node x="2475.5" y="2781.0">sopra.controller.command.Trunk</node>
+    <node x="3060.75" y="1449.0">sopra.model.entities.items.Armor</node>
+    <node x="206.0" y="727.5">sopra.model.entities.Trunk</node>
+    <node x="0.0" y="3309.5">sopra.controller.visitor.AttackVisitor</node>
+    <node x="3767.5" y="1973.5">sopra.model.entities.items.Material</node>
+    <node x="2312.874340784991" y="1968.7914780417227">sopra.controller.Modifications</node>
+    <node x="2239.5" y="1472.0">sopra.model.entities.items.Item.ItemFactory</node>
+    <node x="914.0" y="3287.0">sopra.controller.visitor.ModifyVisitor</node>
+    <node x="2755.5" y="2781.0">sopra.controller.command.CraftingMenu</node>
+    <node x="340.0" y="3364.5">sopra.controller.visitor.PickUpVisitor</node>
+    <node x="3473.544444444445" y="727.5">sopra.model.entities.Inventory</node>
+    <node x="4290.75" y="408.0">sopra.model.entities.EntityType</node>
+    <node x="551.0" y="3790.0">sopra.controller.visitor.AttackVisitor.LootVisitor</node>
+    <node x="2650.5" y="1460.5">sopra.model.entities.items.Recipe</node>
+    <node x="2552.7401851851855" y="750.0">sopra.model.entities.items.Item</node>
+    <node x="427.0" y="783.0">sopra.model.entities.Chest</node>
+    <node x="0.0" y="783.0">sopra.model.entities.Cauldron</node>
+    <node x="839.0" y="551.0">sopra.model.entities.Character</node>
+    <node x="1849.5" y="2953.0">sopra.controller.command.action.MoveToInventory</node>
+    <node x="2469.5" y="2953.0">sopra.controller.command.action.Drop</node>
+    <node x="4254.25" y="1372.5">sopra.model.entities.EntityType.ObjectType</node>
+    <node x="2159.5" y="2953.0">sopra.controller.command.action.Craft</node>
+    <node x="3708.3651851851855" y="1504.5">sopra.model.entities.items.Stackable</node>
+    <node x="3075.5" y="2355.0">sopra.model.entities.items.Recipe.RecipeFactory.RecipeEffect</node>
+    <node x="626.0" y="3353.5">sopra.controller.visitor.UseVisitor</node>
+    <node x="1458.5" y="1940.0">sopra.model.entities.Player.Builder</node>
+    <node x="4407.0" y="1973.0">sopra.model.entities.items.Potion</node>
+    <node x="875.0" y="1984.5">sopra.model.entities.Monster.Builder</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="sopra.model.entities.items.Armor" target="sopra.utils.JSONSerializable">
+      <point x="76.25" y="-149.5" />
+      <point x="3289.5" y="388.0" />
+      <point x="3379.766666666667" y="388.0" />
+      <point x="-11.733333333333348" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.Workbench" target="sopra.model.entities.Entity">
+      <point x="0.0" y="-49.5" />
+      <point x="726.0" y="388.0" />
+      <point x="641.75" y="388.0" />
+      <point x="18.75" y="149.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.SwordPart" target="sopra.model.entities.items.Stackable">
+      <point x="0.0" y="-72.0" />
+      <point x="3654.5" y="1920.0" />
+      <point x="3763.8651851851855" y="1920.0" />
+      <point x="-37.0" y="94.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Decoction" target="sopra.model.entities.items.Stackable">
+      <point x="-60.75" y="-160.5" />
+      <point x="4122.25" y="1910.0" />
+      <point x="3837.8651851851855" y="1910.0" />
+      <point x="37.0" y="94.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Jewel" target="sopra.model.entities.items.Stackable">
+      <point x="50.0" y="-127.0" />
+      <point x="3491.5" y="1910.0" />
+      <point x="3726.8651851851855" y="1910.0" />
+      <point x="-74.0" y="94.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Recipe" target="sopra.utils.JSONSerializable">
+      <point x="93.75" y="-138.0" />
+      <point x="2931.75" y="1297.0" />
+      <point x="2920.80425925926" y="1297.0" />
+      <point x="2920.80425925926" y="378.0" />
+      <point x="3368.0333333333333" y="378.0" />
+      <point x="-23.466666666666697" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Recipe" target="sopra.model.entities.items.Item">
+      <point x="-93.75" y="-138.0" />
+      <point x="2744.25" y="1297.0" />
+      <point x="2645.2401851851855" y="1297.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="sopra.controller.command.action.MoveToInventory" target="sopra.controller.command.action.Action">
+      <point x="0.0" y="-72.0" />
+      <point x="1994.5" y="2928.0" />
+      <point x="2203.8333333333335" y="2928.0" />
+      <point x="-100.66666666666652" y="49.0" />
+    </edge>
+    <edge source="sopra.model.entities.Trunk" target="sopra.model.entities.Entity">
+      <point x="0.0" y="-105.0" />
+      <point x="306.5" y="378.0" />
+      <point x="566.75" y="378.0" />
+      <point x="-56.25" y="149.0" />
+    </edge>
+    <edge source="sopra.model.entities.Player.Builder" target="sopra.model.entities.Player">
+      <point x="0.0" y="-182.5" />
+      <point x="0.0" y="281.5" />
+    </edge>
+    <edge source="sopra.model.entities.Cauldron" target="sopra.model.entities.Entity">
+      <point x="0.0" y="-49.5" />
+      <point x="93.0" y="368.0" />
+      <point x="529.25" y="368.0" />
+      <point x="-93.75" y="149.0" />
+    </edge>
+    <edge source="sopra.controller.visitor.AttackVisitor.LootVisitor" target="sopra.controller.visitor.DefaultEntityVisitor">
+      <point x="63.25" y="-116.0" />
+      <point x="740.75" y="3765.0" />
+      <point x="1167.5" y="3765.0" />
+      <point x="1167.5" y="3257.0" />
+      <point x="843.1999999999999" y="3257.0" />
+      <point x="83.19999999999993" y="291.0" />
+    </edge>
+    <edge source="sopra.controller.command.CraftingMenu" target="sopra.controller.command.Command">
+      <point x="0.0" y="-61.0" />
+      <point x="2885.5" y="2756.0" />
+      <point x="2692.1666666666665" y="2756.0" />
+      <point x="86.66666666666652" y="38.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Stackable" target="sopra.model.entities.items.Item">
+      <point x="-46.25" y="-94.0" />
+      <point x="3754.6151851851855" y="1277.0" />
+      <point x="2719.2401851851855" y="1277.0" />
+      <point x="74.0" y="82.5" />
+    </edge>
+    <edge source="sopra.model.entities.items.Item.ItemFactory" target="sopra.model.entities.items.Item">
+      <point x="0.0" y="-126.5" />
+      <point x="2435.0" y="1297.0" />
+      <point x="2608.2401851851855" y="1297.0" />
+      <point x="-37.0" y="82.5" />
+    </edge>
+    <edge source="sopra.controller.command.action.Drop" target="sopra.controller.command.action.Action">
+      <point x="0.0" y="-72.0" />
+      <point x="2614.5" y="2928.0" />
+      <point x="2405.1666666666665" y="2928.0" />
+      <point x="100.66666666666652" y="49.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Armor" target="sopra.model.entities.items.Item">
+      <point x="-76.25" y="-149.5" />
+      <point x="3137.0" y="1287.0" />
+      <point x="2682.2401851851855" y="1287.0" />
+      <point x="37.0" y="82.5" />
+    </edge>
+    <edge source="sopra.model.entities.EntityType.ObjectType" target="sopra.model.entities.EntityType">
+      <point x="48.25" y="-226.0" />
+      <point x="4399.0" y="1297.0" />
+      <point x="4421.25" y="1297.0" />
+      <point x="0.0" y="424.5" />
+    </edge>
+    <edge source="sopra.model.entities.Player" target="sopra.model.entities.Character">
+      <point x="-136.75" y="-281.5" />
+      <point x="1453.25" y="1297.0" />
+      <point x="1341.5" y="1297.0" />
+      <point x="167.5" y="281.5" />
+    </edge>
+    <edge source="sopra.controller.command.Trunk" target="sopra.controller.command.Command">
+      <point x="0.0" y="-61.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="sopra.controller.command.action.Action" target="sopra.controller.command.Command">
+      <point x="0.0" y="-49.0" />
+      <point x="2304.5" y="2756.0" />
+      <point x="2518.8333333333335" y="2756.0" />
+      <point x="-86.66666666666652" y="38.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Item" target="sopra.utils.JSONSerializable">
+      <point x="46.25" y="-82.5" />
+      <point x="2691.4901851851855" y="368.0" />
+      <point x="3356.3" y="368.0" />
+      <point x="-35.200000000000045" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.Character" target="sopra.model.entities.Entity">
+      <point x="-167.5" y="-281.5" />
+      <point x="1006.5" y="378.0" />
+      <point x="679.25" y="378.0" />
+      <point x="56.25" y="149.0" />
+    </edge>
+    <edge source="sopra.model.entities.EntityType.ObjectType" target="sopra.utils.JSONSerializable">
+      <point x="-48.25" y="-226.0" />
+      <point x="4302.5" y="1297.0" />
+      <point x="4280.25" y="1297.0" />
+      <point x="4280.25" y="348.0" />
+      <point x="3450.166666666667" y="348.0" />
+      <point x="58.66666666666674" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.Player" target="sopra.utils.JSONSerializable">
+      <point x="136.75" y="-281.5" />
+      <point x="1726.75" y="338.0" />
+      <point x="3321.1" y="338.0" />
+      <point x="-70.40000000000009" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Material" target="sopra.utils.JSONSerializable">
+      <point x="68.5" y="-149.0" />
+      <point x="3973.0" y="1920.0" />
+      <point x="3956.0" y="1920.0" />
+      <point x="3956.0" y="368.0" />
+      <point x="3426.7000000000003" y="368.0" />
+      <point x="35.200000000000045" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Weapon" target="sopra.utils.JSONSerializable">
+      <point x="-83.75" y="-182.5" />
+      <point x="1968.25" y="358.0" />
+      <point x="3344.5666666666666" y="358.0" />
+      <point x="-46.933333333333394" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.Character" target="sopra.utils.JSONSerializable">
+      <point x="167.5" y="-281.5" />
+      <point x="1341.5" y="328.0" />
+      <point x="3309.366666666667" y="328.0" />
+      <point x="-82.13333333333321" y="27.0" />
+    </edge>
+    <edge source="sopra.controller.visitor.AttackVisitor" target="sopra.controller.visitor.DefaultEntityVisitor">
+      <point x="0.0" y="-204.0" />
+      <point x="160.0" y="3257.0" />
+      <point x="676.8" y="3257.0" />
+      <point x="-83.20000000000005" y="291.0" />
+    </edge>
+    <edge source="sopra.controller.visitor.PickUpVisitor" target="sopra.controller.visitor.DefaultEntityVisitor">
+      <point x="0.0" y="-149.0" />
+      <point x="473.0" y="3267.0" />
+      <point x="718.4" y="3267.0" />
+      <point x="-41.60000000000002" y="291.0" />
+    </edge>
+    <edge source="sopra.model.entities.Inventory" target="sopra.utils.JSONSerializable">
+      <point x="0.0" y="-105.0" />
+      <point x="3575.544444444445" y="388.0" />
+      <point x="3403.2333333333336" y="388.0" />
+      <point x="11.733333333333348" y="27.0" />
+    </edge>
+    <edge source="sopra.controller.visitor.ModifyVisitor" target="sopra.controller.visitor.DefaultEntityVisitor">
+      <point x="0.0" y="-226.5" />
+      <point x="1035.5" y="3267.0" />
+      <point x="801.5999999999999" y="3267.0" />
+      <point x="41.59999999999991" y="291.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Weapon" target="sopra.model.entities.items.Item">
+      <point x="83.75" y="-182.5" />
+      <point x="2135.75" y="1287.0" />
+      <point x="2571.2401851851855" y="1287.0" />
+      <point x="-74.0" y="82.5" />
+    </edge>
+    <edge source="sopra.model.entities.Monster.Builder" target="sopra.model.entities.Monster">
+      <point x="0.0" y="-138.0" />
+      <point x="0.0" y="105.5" />
+    </edge>
+    <edge source="sopra.model.entities.items.Recipe.RecipeFactory" target="sopra.model.entities.items.Recipe">
+      <point x="0.0" y="-38.5" />
+      <point x="3214.5" y="1920.0" />
+      <point x="2963.0" y="1920.0" />
+      <point x="125.0" y="138.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Recipe.RecipeType" target="sopra.utils.JSONSerializable">
+      <point x="-53.0" y="-127.5" />
+      <point x="1874.0" y="348.0" />
+      <point x="3332.8333333333335" y="348.0" />
+      <point x="-58.66666666666674" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Jewel" target="sopra.utils.JSONSerializable">
+      <point x="-50.0" y="-127.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Decoction" target="sopra.utils.JSONSerializable">
+      <point x="60.75" y="-160.5" />
+      <point x="4243.75" y="358.0" />
+      <point x="3438.4333333333334" y="358.0" />
+      <point x="46.933333333333394" y="27.0" />
+    </edge>
+    <edge source="sopra.controller.visitor.AttackVisitor.LootVisitor" target="sopra.controller.visitor.AttackVisitor">
+      <point x="-63.25" y="-116.0" />
+      <point x="614.25" y="3765.0" />
+      <point x="160.0" y="3765.0" />
+      <point x="0.0" y="204.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Recipe.RecipeType" target="sopra.model.entities.items.Recipe">
+      <point x="53.0" y="-127.5" />
+      <point x="1980.0" y="1920.0" />
+      <point x="2713.0" y="1920.0" />
+      <point x="-125.0" y="138.0" />
+    </edge>
+    <edge source="sopra.model.entities.EntityType" target="sopra.utils.JSONSerializable">
+      <point x="0.0" y="-424.5" />
+      <point x="4421.25" y="338.0" />
+      <point x="3461.9" y="338.0" />
+      <point x="70.40000000000009" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.Chest" target="sopra.model.entities.Entity">
+      <point x="0.0" y="-49.5" />
+      <point x="520.0" y="388.0" />
+      <point x="604.25" y="388.0" />
+      <point x="-18.75" y="149.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Material" target="sopra.model.entities.items.Stackable">
+      <point x="-68.5" y="-149.0" />
+      <point x="3836.0" y="1920.0" />
+      <point x="3800.8651851851855" y="1920.0" />
+      <point x="0.0" y="94.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Potion" target="sopra.model.entities.items.Stackable">
+      <point x="-51.75" y="-149.5" />
+      <point x="4458.75" y="1900.0" />
+      <point x="3874.8651851851855" y="1900.0" />
+      <point x="74.0" y="94.0" />
+    </edge>
+    <edge source="sopra.controller.command.action.Craft" target="sopra.controller.command.action.Action">
+      <point x="0.0" y="-72.0" />
+      <point x="0.0" y="49.0" />
+    </edge>
+    <edge source="sopra.model.entities.Monster" target="sopra.model.entities.Character">
+      <point x="0.0" y="-105.5" />
+      <point x="-167.5" y="281.5" />
+    </edge>
+    <edge source="sopra.controller.visitor.UseVisitor" target="sopra.controller.visitor.DefaultEntityVisitor">
+      <point x="0.0" y="-160.0" />
+      <point x="0.0" y="291.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Recipe.RecipeFactory.RecipeEffect" target="sopra.model.entities.items.Recipe.RecipeFactory">
+      <point x="0.0" y="-127.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="sopra.model.entities.items.Item" target="sopra.model.entities.Entity">
+      <point x="-46.25" y="-82.5" />
+      <point x="2598.9901851851855" y="318.0" />
+      <point x="716.75" y="318.0" />
+      <point x="93.75" y="149.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Potion" target="sopra.utils.JSONSerializable">
+      <point x="51.75" y="-149.5" />
+      <point x="4562.25" y="328.0" />
+      <point x="3473.633333333333" y="328.0" />
+      <point x="82.13333333333321" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Stackable" target="sopra.utils.JSONSerializable">
+      <point x="46.25" y="-94.0" />
+      <point x="3847.1151851851855" y="378.0" />
+      <point x="3414.9666666666667" y="378.0" />
+      <point x="23.466666666666697" y="27.0" />
+    </edge>
+    <edge source="sopra.model.entities.items.Recipe.RecipeContainer" target="sopra.model.entities.items.Recipe">
+      <point x="0.0" y="-160.5" />
+      <point x="0.0" y="138.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3115063260921461" x="2176.2790252126597" y="1318.122001685953" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

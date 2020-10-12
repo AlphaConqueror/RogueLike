@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+  "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+  "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+  <suppress checks="SummaryJavadoc"/>
+  <suppress checks="JavadocMethod"/>
+  <suppress checks="AbbreviationAsWordInName"/>
+  <suppress checks="JavadocTagContinuationIndentation"/>
+  <suppress checks="JavadocParagraph"/>
+
+  <!-- TODO(s9latimm) remove when JAVA 14 fixed -->
+  <suppress checks="MissingSwitchDefault"/>
+  <suppress message="'case' has incorrect indentation level"/>
+  <suppress message="'case' child has incorrect indentation level"/>
+  <suppress message="'default' has incorrect indentation level"/>
+  <suppress message="'default' child has incorrect indentation level"/>
+  <suppress message="'switch rcurly' has incorrect indentation level"/>
+  <suppress message="'switch' is not preceded with whitespace"/>
+  <suppress message="'lambda arguments' has incorrect indentation level"/>
+</suppressions>

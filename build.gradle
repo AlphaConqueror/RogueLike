@@ -1,0 +1,352 @@
+import com.github.spotbugs.snom.SpotBugsTask
+import org.gradle.internal.jvm.Jvm
+
+plugins {
+    id "java"
+    id "pmd"
+    id "jacoco"
+    id "checkstyle"
+    id "de.aaschmid.cpd" version "3.1"
+    id "de.jansauer.printcoverage" version "2.0.0"
+    id "com.github.spotbugs" version "4.5.0"
+}
+
+group "sopra"
+version = 1.1
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_14
+    targetCompatibility = JavaVersion.VERSION_14
+}
+
+if (!JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_14))
+    throw new GradleException("REQUIRES JAVA 14 (WAS ${JavaVersion.current()})")
+
+wrapper {
+    gradleVersion = "6.6"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "src/main/java"
+        }
+        resources {
+            srcDir "src/main/resources"
+            include "config/simplelogger.properties"
+        }
+    }
+    test {
+        java {
+            srcDir "src/test/java"
+        }
+        resources {
+            srcDir "src/test/resources"
+            srcDir "src/main/resources"
+        }
+        compileClasspath += main.compileClasspath
+    }
+    systemtest {
+        java {
+            srcDir "src/systemtest/java"
+        }
+        resources {
+            srcDir "src/systemtest/resources"
+            srcDir "src/main/resources"
+        }
+        compileClasspath += test.compileClasspath
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    exclusiveContent {
+        forRepository {
+            flatDir {
+                dir "libs/external"
+            }
+        }
+        forRepository {
+            maven {
+                url "https://sopra.se.cs.uni-saarland.de:51623/resources/jars"
+                credentials {
+                    username "resources"
+                    password "PMrTfgMOudMQFGzsexR5REe4TjgldD"
+                }
+                metadataSources {
+                    artifact()
+                }
+            }
+        }
+        filter {
+            includeGroup "sopra.comm"
+            includeGroup "sopra.systemtest"
+            includeGroup "sopra.client"
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+configurations {
+    systemtest.extendsFrom testImplementation
+    gui
+}
+
+dependencies {
+    implementation("sopra.comm:comm-lib:0.5") { changing = true }
+    implementation "org.slf4j:slf4j-simple:1.7.25"
+    implementation "org.slf4j:slf4j-api:1.7.25"
+    implementation "commons-cli:commons-cli:1.4"
+    implementation "org.json:json:20200518"
+    implementation "org.everit.json:org.everit.json.schema:1.5.1"
+    implementation "org.jetbrains:annotations:16.0.2"
+    implementation "org.zeromq:jeromq:0.5.2"
+    implementation "org.skyscreamer:jsonassert:1.5.0"
+    implementation "org.msgpack:msgpack-core:0.8.20"
+
+    testImplementation "org.mockito:mockito-core:3.5.7"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.6.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.6.2"
+
+    systemtestImplementation("sopra.systemtest:systemtest-api:1.2") { changing = true }
+
+    gui("sopra.client:gui:0.2") { changing = true }
+
+    runtimeOnly "de.aaschmid:gradle-cpd-plugin:2.0"
+
+    pmd "net.sourceforge.pmd:pmd-java:6.26.0"
+    pmd "net.sourceforge.pmd:pmd-core:6.26.0"
+
+    spotbugsPlugins "com.mebigfatguy.sb-contrib:sb-contrib:7.4.7"
+    spotbugsPlugins "com.h3xstream.findsecbugs:findsecbugs-plugin:1.10.1"
+
+    checkstyle "com.puppycrawl.tools:checkstyle:8.36.1"
+}
+
+task detectSuppressions {
+    sourceSets.main.allJava.each { File file ->
+        def regex = "(cpd-off)|(nopmd)|(suppress(sb)?warnings)"
+        new File(file.path).eachLine { line ->
+            if ((line.toLowerCase() =~ regex)) {
+                throw new GradleException("Suppressions of analysis tools detected in the following file: " + file.path)
+            }
+        }
+    }
+    sourceSets.test.allJava.each { File file ->
+        def regex = "(cpd-off)|(nopmd)|(suppress(sb)?warnings)"
+        new File(file.path).eachLine { line ->
+            if ((line.toLowerCase() =~ regex)) {
+                throw new GradleException("Suppressions of analysis tools detected in the following file: " + file.path)
+            }
+        }
+    }
+    sourceSets.systemtest.allJava.each { File file ->
+        def regex = "(cpd-off)|(nopmd)|(suppress(sb)?warnings)"
+        new File(file.path).eachLine { line ->
+            if ((line.toLowerCase() =~ regex)) {
+                throw new GradleException("Suppressions of analysis tools detected in the following file: " + file.path)
+            }
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    doFirst {
+        println Jvm.current()
+    }
+    options.encoding "UTF-8"
+    options.compilerArgs += "-Xlint:all"
+    options.compilerArgs += "-Werror"
+    sourceCompatibility = 14
+    targetCompatibility = 14
+}
+
+build {
+    dependsOn detectSuppressions
+    dependsOn check
+    dependsOn javadoc
+}
+
+pmd {
+    toolVersion = "6.26.0"
+    ignoreFailures = false
+}
+
+tasks.withType(Pmd) {
+    incrementalAnalysis.set(false)
+    maxFailures.set(0)
+    reports {
+        html.enabled true
+        xml.enabled true
+    }
+    ruleSets = ["${projectDir}/config/pmd/sopra.xml"]
+}
+
+printcoverage {
+    coverageType.set("INSTRUCTION")
+}
+
+jacoco {
+    toolVersion = "0.8.5"
+}
+
+tasks.withType(JacocoReport) {
+    dependsOn test
+    reports {
+        html.enabled true
+        xml.enabled true
+        csv.enabled false
+        html.destination file("${buildDir}/reports/jacoco")
+    }
+    finalizedBy printCoverage
+}
+
+checkstyle {
+    toolVersion = "8.36.1"
+    ignoreFailures = false
+    showViolations = true
+    maxWarnings(0)
+    maxErrors(0)
+    configFile file("${projectDir}/config/checkstyle/checkstyle.xml")
+    reportsDir file("${buildDir}/reports/checkstyle")
+}
+
+tasks.withType(Checkstyle) {
+    reports {
+        html.enabled true
+        xml.enabled false
+    }
+}
+
+cpd {
+    language = 'java'
+    ignoreFailures false
+}
+
+cpdCheck {
+    reports {
+        text.enabled true
+        xml.enabled false
+        csv.enabled false
+    }
+    minimumTokenCount = 128
+    source = sourceSets.main.allJava
+}
+
+spotbugs {
+    toolVersion.set("4.1.2")
+    ignoreFailures.set(false)
+    effort = "max"
+    includeFilter.set(file("${projectDir}/config/spotbugs/include.xml"))
+    excludeFilter.set(file("${projectDir}/config/spotbugs/exclude.xml"))
+}
+
+tasks.withType(SpotBugsTask) {
+    reports {
+        html.enabled true
+        xml.enabled false
+    }
+}
+
+test {
+    dependsOn(cleanTest)
+    useJUnitPlatform()
+}
+
+tasks.withType(Test) {
+    testClassesDirs = sourceSets.main.output.classesDirs + sourceSets.test.output.classesDirs
+    classpath = sourceSets.main.runtimeClasspath + sourceSets.test.runtimeClasspath
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams true
+    }
+    ignoreFailures false
+    finalizedBy jacocoTestReport
+}
+
+javadoc {
+    options.encoding = "UTF-8"
+    options.addBooleanOption("html5", true)
+    options.destinationDirectory = file("${buildDir}/reports/javadoc")
+    doLast {
+        copy {
+            from "${buildDir}/reports/javadoc"
+            into "${projectDir}/docs/"
+        }
+    }
+}
+
+jar {
+    dependsOn cleanJar
+    dependsOn check
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes(
+                "Main-Class": "sopra.Main",
+                "Entry-Point": "sopra.Main",
+                "Implementation-Title": "SoPra",
+                "Application-Name": "SoPra",
+                "Implementation-Version": project.version,
+        )
+    }
+    archiveFileName = "sopra.jar"
+    from "config/simplelogger.properties"
+    from sourceSets.main.output
+    from sourceSets.systemtest.output
+    from {
+        configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    from {
+        configurations.systemtestCompileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    doLast {
+        copy {
+            from jar
+            into "${projectDir}/libs/"
+        }
+
+    }
+}
+
+task serverJavaExec(type: JavaExec) {
+    dependsOn jar
+    classpath files("libs/sopra.jar")
+    args = ["--port", PORT, "--timeout", SERVER_TIMEOUT, "--map", MAP, "--seed", SEED]
+    main "sopra.Main"
+}
+
+task downloadLibs(type: Copy) {
+    from configurations.gui
+    into "libs/external"
+}
+
+task clientJavaExec(type: JavaExec) {
+    dependsOn downloadLibs
+    classpath files("libs/external/gui-0.2.jar")
+    args = ["-port", PORT, "-timeout", GUI_TIMEOUT]
+    main "sopra.client.gui.Main"
+}
+
+task systemtestJavaExec(type: JavaExec) {
+    dependsOn jar
+    doFirst {
+        delete "test_tmp"
+    }
+    classpath = files('libs/sopra.jar')
+    args = ["-test", "libs/sopra.jar", "-port", "1337", "-timeout", "2", "-system"]
+    main = "sopra.systemtest.Main"
+    doLast {
+        delete "test_tmp"
+    }
+}
+
+task getHomeDir {
+    doLast {
+        println gradle.gradleHomeDir
+    }
+}
+

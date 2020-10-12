@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "additionalProperties": true,
+  "definitions": {
+    "level": {
+      "maximum": 10,
+      "minimum": 1,
+      "type": "number"
+    },
+    "stackSize": {
+      "minimum": 1,
+      "type": "number"
+    }
+  },
+  "maxProperties": 2,
+  "minProperties": 2,
+  "properties": {
+    "items": {
+      "items": {
+        "additionalProperties": true,
+        "maxProperties": 2,
+        "minProperties": 1,
+        "properties": {
+          "armor": {
+            "additionalProperties": true,
+            "properties": {
+              "level": {
+                "$ref": "#/definitions/level"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "level",
+              "name"
+            ],
+            "type": "object"
+          },
+          "decoction": {
+            "additionalProperties": true,
+            "properties": {
+              "skill": {
+                "enum": [
+                  "agility",
+                  "luck",
+                  "strength",
+                  "vitality"
+                ],
+                "type": "string"
+              },
+              "stackSize": {
+                "$ref": "#/definitions/stackSize"
+              }
+            },
+            "required": [
+              "skill",
+              "stackSize"
+            ],
+            "type": "object"
+          },
+          "objectType": {
+            "enum": [
+              "armor",
+              "decoction",
+              "empty",
+              "potion",
+              "swordPart",
+              "weapon",
+              "recipe",
+              "material",
+              "jewel"
+            ],
+            "type": "string"
+          },
+          "potion": {
+            "additionalProperties": true,
+            "properties": {
+              "level": {
+                "$ref": "#/definitions/level"
+              },
+              "stackSize": {
+                "$ref": "#/definitions/stackSize"
+              }
+            },
+            "required": [
+              "level",
+              "stackSize"
+            ],
+            "type": "object"
+          },
+          "swordPart": {
+            "additionalProperties": false,
+            "properties": {
+              "stackSize": {
+                "$ref": "#/definitions/stackSize"
+              }
+            },
+            "required": [
+              "stackSize"
+            ],
+            "type": "object"
+          },
+          "weapon": {
+            "additionalProperties": true,
+            "properties": {
+              "level": {
+                "enum": [
+                  1,
+                  10,
+                  2,
+                  3,
+                  4,
+                  42,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9
+                ],
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "range": {
+                "maximum": 6,
+                "minimum": 1,
+                "type": "number"
+              }
+            },
+            "required": [
+              "level",
+              "name",
+              "range"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "objectType"
+        ],
+        "type": "object"
+      },
+      "maxItems": 9,
+      "minItems": 9,
+      "type": "array"
+    },
+    "listType": {
+      "enum": [
+        "items",
+        "skills",
+        "craft",
+        "trunk"
+      ],
+      "type": "string"
+    },
+    "skills": {
+      "items": {
+        "enum": [
+          "agility",
+          "luck",
+          "strength",
+          "vitality"
+        ],
+        "type": "string"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "listType"
+  ],
+  "type": "object"
+}

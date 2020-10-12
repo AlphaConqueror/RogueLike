@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "additionalProperties": false,
+  "definitions": {
+    "level": {
+      "maximum": 10,
+      "minimum": 1,
+      "type": "number"
+    }
+  },
+  "properties": {
+    "agility": {
+      "minimum": 1,
+      "type": "number"
+    },
+    "armor": {
+      "additionalProperties": true,
+      "properties": {
+        "level": {
+          "$ref": "#/definitions/level"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "name"
+      ],
+      "type": "object"
+    },
+    "currentHealth": {
+      "type": "number"
+    },
+    "experience": {
+      "minimum": 0,
+      "type": "number"
+    },
+    "level": {
+      "$ref": "#/definitions/level"
+    },
+    "luck": {
+      "minimum": 1,
+      "type": "number"
+    },
+    "maxHealth": {
+      "minimum": 1,
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "skillPoints": {
+      "minimum": 0,
+      "type": "number"
+    },
+    "strength": {
+      "minimum": 1,
+      "type": "number"
+    },
+    "vitality": {
+      "minimum": 1,
+      "type": "number"
+    },
+    "weapon": {
+      "additionalProperties": true,
+      "properties": {
+        "level": {
+          "enum": [
+            1,
+            10,
+            2,
+            3,
+            4,
+            42,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "range": {
+          "maximum": 6,
+          "minimum": 1,
+          "type": "number"
+        }
+      },
+      "required": [
+        "level",
+        "name",
+        "range"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "agility",
+    "currentHealth",
+    "experience",
+    "level",
+    "luck",
+    "maxHealth",
+    "name",
+    "skillPoints",
+    "strength",
+    "vitality",
+    "weapon"
+  ],
+  "type": "object"
+}

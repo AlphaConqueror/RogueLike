@@ -1,0 +1,1294 @@
+{
+  "rooms": [
+    {
+      "name": "Island",
+      "level": 0,
+      "tiles": [
+        {
+          "x": 1,
+          "y": -24,
+          "z": 23
+        },
+        {
+          "x": 2,
+          "y": -24,
+          "z": 22
+        },
+        {
+          "x": 3,
+          "y": -24,
+          "z": 21
+        },
+        {
+          "x": 4,
+          "y": -25,
+          "z": 21
+        },
+        {
+          "x": 5,
+          "y": -26,
+          "z": 21
+        },
+        {
+          "x": 6,
+          "y": -27,
+          "z": 21
+        },
+        {
+          "x": 7,
+          "y": -28,
+          "z": 21
+        },
+        {
+          "x": 8,
+          "y": -29,
+          "z": 21
+        },
+        {
+          "x": 9,
+          "y": -30,
+          "z": 21
+        },
+        {
+          "x": 8,
+          "y": -30,
+          "z": 22
+        },
+        {
+          "x": 7,
+          "y": -29,
+          "z": 22
+        },
+        {
+          "x": 6,
+          "y": -28,
+          "z": 22
+        },
+        {
+          "x": 5,
+          "y": -27,
+          "z": 22
+        },
+        {
+          "x": 4,
+          "y": -26,
+          "z": 22
+        },
+        {
+          "x": 3,
+          "y": -25,
+          "z": 22
+        },
+        {
+          "x": 2,
+          "y": -25,
+          "z": 23
+        },
+        {
+          "x": 1,
+          "y": -25,
+          "z": 24
+        },
+        {
+          "x": 0,
+          "y": -24,
+          "z": 24
+        },
+        {
+          "x": 0,
+          "y": -23,
+          "z": 23
+        },
+        {
+          "x": 1,
+          "y": -23,
+          "z": 22
+        },
+        {
+          "x": 2,
+          "y": -23,
+          "z": 21
+        },
+        {
+          "x": 2,
+          "y": -26,
+          "z": 24
+        },
+        {
+          "x": 3,
+          "y": -26,
+          "z": 23
+        },
+        {
+          "x": 4,
+          "y": -27,
+          "z": 23
+        },
+        {
+          "x": 5,
+          "y": -28,
+          "z": 23
+        },
+        {
+          "x": 6,
+          "y": -29,
+          "z": 23
+        },
+        {
+          "x": 7,
+          "y": -30,
+          "z": 23
+        },
+        {
+          "x": 8,
+          "y": -31,
+          "z": 23
+        },
+        {
+          "x": 9,
+          "y": -31,
+          "z": 22
+        },
+        {
+          "x": 9,
+          "y": -32,
+          "z": 23
+        },
+        {
+          "x": 10,
+          "y": -32,
+          "z": 22
+        },
+        {
+          "x": 10,
+          "y": -31,
+          "z": 21
+        },
+        {
+          "x": 11,
+          "y": -32,
+          "z": 21
+        },
+        {
+          "x": 11,
+          "y": -33,
+          "z": 22
+        },
+        {
+          "x": 10,
+          "y": -33,
+          "z": 23
+        },
+        {
+          "x": 9,
+          "y": -33,
+          "z": 24
+        },
+        {
+          "x": 8,
+          "y": -32,
+          "z": 24
+        },
+        {
+          "x": 7,
+          "y": -31,
+          "z": 24
+        },
+        {
+          "x": 6,
+          "y": -30,
+          "z": 24
+        },
+        {
+          "x": 5,
+          "y": -29,
+          "z": 24
+        },
+        {
+          "x": 4,
+          "y": -28,
+          "z": 24
+        },
+        {
+          "x": 3,
+          "y": -27,
+          "z": 24
+        },
+        {
+          "x": 10,
+          "y": -34,
+          "z": 24
+        },
+        {
+          "x": 11,
+          "y": -34,
+          "z": 23
+        },
+        {
+          "x": 12,
+          "y": -34,
+          "z": 22
+        },
+        {
+          "x": 12,
+          "y": -33,
+          "z": 21
+        },
+        {
+          "x": 13,
+          "y": -34,
+          "z": 21
+        },
+        {
+          "x": 13,
+          "y": -35,
+          "z": 22
+        },
+        {
+          "x": 12,
+          "y": -35,
+          "z": 23
+        },
+        {
+          "x": 11,
+          "y": -35,
+          "z": 24
+        },
+        {
+          "x": 12,
+          "y": -36,
+          "z": 24
+        },
+        {
+          "x": 13,
+          "y": -36,
+          "z": 23
+        },
+        {
+          "x": 13,
+          "y": -37,
+          "z": 24
+        },
+        {
+          "x": 14,
+          "y": -37,
+          "z": 23
+        },
+        {
+          "x": 14,
+          "y": -36,
+          "z": 22
+        },
+        {
+          "x": 14,
+          "y": -35,
+          "z": 21
+        },
+        {
+          "x": 15,
+          "y": -36,
+          "z": 21
+        },
+        {
+          "x": 15,
+          "y": -37,
+          "z": 22
+        },
+        {
+          "x": 15,
+          "y": -38,
+          "z": 23
+        },
+        {
+          "x": 16,
+          "y": -39,
+          "z": 23
+        },
+        {
+          "x": 16,
+          "y": -38,
+          "z": 22
+        },
+        {
+          "x": 16,
+          "y": -37,
+          "z": 21
+        },
+        {
+          "x": 17,
+          "y": -38,
+          "z": 21
+        },
+        {
+          "x": 17,
+          "y": -39,
+          "z": 22
+        },
+        {
+          "x": 17,
+          "y": -40,
+          "z": 23
+        },
+        {
+          "x": 16,
+          "y": -40,
+          "z": 24
+        },
+        {
+          "x": 15,
+          "y": -39,
+          "z": 24
+        },
+        {
+          "x": 14,
+          "y": -38,
+          "z": 24
+        }
+      ]
+    },
+    {
+      "name": "Dungeon 1",
+      "level": 1,
+      "tiles": [
+        {
+          "x": -5,
+          "y": -8,
+          "z": 13
+        },
+        {
+          "x": -5,
+          "y": -9,
+          "z": 14
+        },
+        {
+          "x": -6,
+          "y": -8,
+          "z": 14
+        },
+        {
+          "x": -6,
+          "y": -9,
+          "z": 15
+        }
+      ]
+    },
+    {
+      "name": "Dungeon 2",
+      "level": 2,
+      "tiles": [
+        {
+          "x": 11,
+          "y": -18,
+          "z": 7
+        },
+        {
+          "x": 12,
+          "y": -18,
+          "z": 6
+        },
+        {
+          "x": 11,
+          "y": -17,
+          "z": 6
+        },
+        {
+          "x": 12,
+          "y": -17,
+          "z": 5
+        }
+      ]
+    },
+    {
+      "name": "Dungeon 3",
+      "level": 3,
+      "tiles": [
+        {
+          "x": 31,
+          "y": -36,
+          "z": 5
+        },
+        {
+          "x": 30,
+          "y": -36,
+          "z": 6
+        },
+        {
+          "x": 31,
+          "y": -37,
+          "z": 6
+        },
+        {
+          "x": 32,
+          "y": -37,
+          "z": 5
+        },
+        {
+          "x": 32,
+          "y": -38,
+          "z": 6
+        }
+      ]
+    },
+    {
+      "name": "Dungeon 4",
+      "level": 4,
+      "tiles": [
+        {
+          "x": 33,
+          "y": -53,
+          "z": 20
+        },
+        {
+          "x": 32,
+          "y": -53,
+          "z": 21
+        },
+        {
+          "x": 33,
+          "y": -54,
+          "z": 21
+        },
+        {
+          "x": 34,
+          "y": -54,
+          "z": 20
+        },
+        {
+          "x": 34,
+          "y": -53,
+          "z": 19
+        }
+      ]
+    },
+    {
+      "name": "Dungeon 5",
+      "level": 5,
+      "tiles": [
+        {
+          "x": 17,
+          "y": -53,
+          "z": 36
+        },
+        {
+          "x": 17,
+          "y": -52,
+          "z": 35
+        },
+        {
+          "x": 18,
+          "y": -53,
+          "z": 35
+        },
+        {
+          "x": 18,
+          "y": -52,
+          "z": 34
+        },
+        {
+          "x": 18,
+          "y": -54,
+          "z": 36
+        }
+      ]
+    },
+    {
+      "name": "Dungeon 6",
+      "level": 6,
+      "tiles": [
+        {
+          "x": -8,
+          "y": -30,
+          "z": 38
+        },
+        {
+          "x": -8,
+          "y": -31,
+          "z": 39
+        },
+        {
+          "x": -7,
+          "y": -31,
+          "z": 38
+        },
+        {
+          "x": -7,
+          "y": -30,
+          "z": 37
+        },
+        {
+          "x": -6,
+          "y": -31,
+          "z": 37
+        }
+      ]
+    },
+    {
+      "name": "Dungeon 7",
+      "level": 7,
+      "tiles": [
+        {
+          "x": 46,
+          "y": -49,
+          "z": 3
+        },
+        {
+          "x": 46,
+          "y": -50,
+          "z": 4
+        },
+        {
+          "x": 47,
+          "y": -50,
+          "z": 3
+        },
+        {
+          "x": 47,
+          "y": -49,
+          "z": 2
+        },
+        {
+          "x": 47,
+          "y": -51,
+          "z": 4
+        }
+      ]
+    },
+    {
+      "name": "Dungeon 8",
+      "level": 8,
+      "tiles": [
+        {
+          "x": 29,
+          "y": -69,
+          "z": 40
+        },
+        {
+          "x": 29,
+          "y": -68,
+          "z": 39
+        },
+        {
+          "x": 30,
+          "y": -68,
+          "z": 38
+        },
+        {
+          "x": 30,
+          "y": -69,
+          "z": 39
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "position": {
+        "x": 0,
+        "y": -23,
+        "z": 23
+      },
+      "objectType": "player",
+      "player": {
+        "name": "Player",
+        "experience": 0,
+        "skillPoints": 0,
+        "currentHealth": 20,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1,
+        "luck": 1,
+        "weapon": {
+          "name": "Sword",
+          "level": 1,
+          "range": 1,
+          "damage": 1
+        },
+        "armor": {
+          "name": "Shield",
+          "level": 1,
+          "armor": 1
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 30,
+        "y": -68,
+        "z": 38
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 8,
+          "y": -32,
+          "z": 24
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 18,
+        "y": -53,
+        "z": 35
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 4,
+          "y": -28,
+          "z": 24
+        }
+      }
+    },
+    {
+      "position": {
+        "x": -6,
+        "y": -9,
+        "z": 15
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 0,
+          "y": -24,
+          "z": 24
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 12,
+        "y": -17,
+        "z": 5
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 1,
+          "y": -25,
+          "z": 24
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 31,
+        "y": -36,
+        "z": 5
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 7,
+          "y": -31,
+          "z": 24
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 47,
+        "y": -49,
+        "z": 2
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 6,
+          "y": -30,
+          "z": 24
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 33,
+        "y": -54,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 2,
+          "y": -26,
+          "z": 24
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 2,
+        "y": -23,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": -5,
+          "y": -9,
+          "z": 14
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 4,
+        "y": -25,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 32,
+          "y": -37,
+          "z": 5
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 5,
+        "y": -26,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 34,
+          "y": -53,
+          "z": 19
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 6,
+        "y": -27,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 47,
+          "y": -50,
+          "z": 3
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 7,
+        "y": -28,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 18,
+          "y": -52,
+          "z": 34
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 8,
+        "y": -29,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": -6,
+          "y": -31,
+          "z": 37
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 9,
+        "y": -30,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 30,
+          "y": -69,
+          "z": 39
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 3,
+        "y": -24,
+        "z": 21
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 12,
+          "y": -18,
+          "z": 6
+        }
+      }
+    },
+    {
+      "position": {
+        "x": -7,
+        "y": -30,
+        "z": 37
+      },
+      "objectType": "door",
+      "door": {
+        "destination": {
+          "x": 11,
+          "y": -35,
+          "z": 24
+        }
+      }
+    },
+    {
+      "position": {
+        "x": 33,
+        "y": -53,
+        "z": 20
+      },
+      "objectType": "chest",
+      "chest": {}
+    },
+    {
+      "position": {
+        "x": 17,
+        "y": -53,
+        "z": 36
+      },
+      "objectType": "chest",
+      "chest": {}
+    },
+    {
+      "position": {
+        "x": -5,
+        "y": -8,
+        "z": 13
+      },
+      "objectType": "chest",
+      "chest": {}
+    },
+    {
+      "position": {
+        "x": 11,
+        "y": -18,
+        "z": 7
+      },
+      "objectType": "chest",
+      "chest": {}
+    },
+    {
+      "position": {
+        "x": 31,
+        "y": -37,
+        "z": 6
+      },
+      "objectType": "chest",
+      "chest": {}
+    },
+    {
+      "position": {
+        "x": 46,
+        "y": -49,
+        "z": 3
+      },
+      "objectType": "chest",
+      "chest": {}
+    },
+    {
+      "position": {
+        "x": -7,
+        "y": -31,
+        "z": 38
+      },
+      "objectType": "chest",
+      "chest": {}
+    },
+    {
+      "position": {
+        "x": 29,
+        "y": -69,
+        "z": 40
+      },
+      "objectType": "monster",
+      "monster": {
+        "type": "professor",
+        "name": "Monster",
+        "level": 8,
+        "currentHealth": 10,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1
+      }
+    },
+    {
+      "position": {
+        "x": 34,
+        "y": -54,
+        "z": 20
+      },
+      "objectType": "monster",
+      "monster": {
+        "type": "assistant",
+        "name": "Monster",
+        "level": 4,
+        "currentHealth": 10,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1
+      }
+    },
+    {
+      "position": {
+        "x": -8,
+        "y": -30,
+        "z": 38
+      },
+      "objectType": "monster",
+      "monster": {
+        "type": "assistant",
+        "name": "Monster",
+        "level": 6,
+        "currentHealth": 10,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1
+      }
+    },
+    {
+      "position": {
+        "x": -6,
+        "y": -8,
+        "z": 14
+      },
+      "objectType": "monster",
+      "monster": {
+        "type": "assistant",
+        "name": "Monster",
+        "level": 1,
+        "currentHealth": 10,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1
+      }
+    },
+    {
+      "position": {
+        "x": 11,
+        "y": -17,
+        "z": 6
+      },
+      "objectType": "monster",
+      "monster": {
+        "type": "assistant",
+        "name": "Monster",
+        "level": 2,
+        "currentHealth": 10,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1
+      }
+    },
+    {
+      "position": {
+        "x": 18,
+        "y": -54,
+        "z": 36
+      },
+      "objectType": "monster",
+      "monster": {
+        "type": "assistant",
+        "name": "Monster",
+        "level": 5,
+        "currentHealth": 10,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1
+      }
+    },
+    {
+      "position": {
+        "x": 47,
+        "y": -51,
+        "z": 4
+      },
+      "objectType": "monster",
+      "monster": {
+        "type": "assistant",
+        "name": "Monster",
+        "level": 7,
+        "currentHealth": 10,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1
+      }
+    },
+    {
+      "position": {
+        "x": 32,
+        "y": -38,
+        "z": 6
+      },
+      "objectType": "monster",
+      "monster": {
+        "type": "assistant",
+        "name": "Monster",
+        "level": 3,
+        "currentHealth": 10,
+        "strength": 1,
+        "vitality": 1,
+        "agility": 1
+      }
+    },
+    {
+      "position": {
+        "x": 8,
+        "y": -30,
+        "z": 22
+      },
+      "objectType": "potion",
+      "potion": {
+        "name": "potion",
+        "level": 1,
+        "value": 5
+      }
+    },
+    {
+      "position": {
+        "x": 1,
+        "y": -23,
+        "z": 22
+      },
+      "objectType": "swordPart",
+      "swordPart": {}
+    },
+    {
+      "position": {
+        "x": 2,
+        "y": -24,
+        "z": 22
+      },
+      "objectType": "swordPart",
+      "swordPart": {}
+    },
+    {
+      "position": {
+        "x": 3,
+        "y": -25,
+        "z": 22
+      },
+      "objectType": "swordPart",
+      "swordPart": {}
+    },
+    {
+      "position": {
+        "x": 4,
+        "y": -26,
+        "z": 22
+      },
+      "objectType": "swordPart",
+      "swordPart": {}
+    },
+    {
+      "position": {
+        "x": 5,
+        "y": -27,
+        "z": 22
+      },
+      "objectType": "swordPart",
+      "swordPart": {}
+    },
+    {
+      "position": {
+        "x": 6,
+        "y": -28,
+        "z": 22
+      },
+      "objectType": "swordPart",
+      "swordPart": {}
+    },
+    {
+      "position": {
+        "x": 1,
+        "y": -24,
+        "z": 23
+      },
+      "objectType": "potion",
+      "potion": {
+        "name": "potion",
+        "level": 1,
+        "value": 5
+      }
+    },
+    {
+      "position": {
+        "x": 2,
+        "y": -25,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 3,
+        "y": -26,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 4,
+        "y": -27,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 5,
+        "y": -28,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 6,
+        "y": -29,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 7,
+        "y": -30,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 8,
+        "y": -31,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 9,
+        "y": -32,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 10,
+        "y": -33,
+        "z": 23
+      },
+      "objectType": "weapon",
+      "weapon": {
+        "name": "Sword",
+        "level": 1,
+        "range": 1,
+        "damage": 1
+      }
+    },
+    {
+      "position": {
+        "x": 7,
+        "y": -29,
+        "z": 22
+      },
+      "objectType": "swordPart",
+      "swordPart": {}
+    },
+    {
+      "position": {
+        "x": 10,
+        "y": -32,
+        "z": 22
+      },
+      "objectType": "potion",
+      "potion": {
+        "name": "potion",
+        "level": 5,
+        "value": 25
+      }
+    },
+    {
+      "position": {
+        "x": 9,
+        "y": -33,
+        "z": 24
+      },
+      "objectType": "potion",
+      "potion": {
+        "name": "potion",
+        "level": 1,
+        "value": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "additionalProperties": false,
+  "definitions": {
+    "coordinate": {
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "integer"
+        },
+        "y": {
+          "type": "integer"
+        },
+        "z": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "type": "object"
+    },
+    "level": {
+      "maximum": 10,
+      "minimum": 1,
+      "type": "number"
+    }
+  },
+  "properties": {
+    "entities": {
+      "contains": {
+        "required": [
+          "player"
+        ]
+      },
+      "items": {
+        "additionalProperties": true,
+        "maxProperties": 3,
+        "minProperties": 3,
+        "properties": {
+          "armor": {
+            "additionalProperties": true,
+            "properties": {
+              "level": {
+                "$ref": "#/definitions/level"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "level",
+              "name"
+            ],
+            "type": "object"
+          },
+          "chest": {
+            "additionalProperties": false,
+            "type": "object"
+          },
+          "decoction": {
+            "additionalProperties": true,
+            "properties": {
+              "skill": {
+                "enum": [
+                  "agility",
+                  "luck",
+                  "strength",
+                  "vitality"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "skill"
+            ],
+            "type": "object"
+          },
+          "door": {
+            "additionalProperties": false,
+            "properties": {
+              "destination": {
+                "$ref": "#/definitions/coordinate"
+              }
+            },
+            "required": [
+              "destination"
+            ],
+            "type": "object"
+          },
+          "monster": {
+            "additionalProperties": false,
+            "dependencies": {
+              "agility": [
+                "strength",
+                "vitality"
+              ],
+              "strength": [
+                "agility",
+                "vitality"
+              ],
+              "vitality": [
+                "agility",
+                "strength"
+              ]
+            },
+            "properties": {
+              "agility": {
+                "minimum": 1,
+                "type": "number"
+              },
+              "currentHealth": {
+                "minimum": 1,
+                "type": "number"
+              },
+              "level": {
+                "$ref": "#/definitions/level"
+              },
+              "name": {
+                "type": "string"
+              },
+              "strength": {
+                "minimum": 1,
+                "type": "number"
+              },
+              "type": {
+                "enum": [
+                  "assistant",
+                  "bug",
+                  "overflow",
+                  "professor",
+                  "tutor"
+                ],
+                "type": "string"
+              },
+              "vitality": {
+                "minimum": 1,
+                "type": "number"
+              }
+            },
+            "required": [
+              "level",
+              "name",
+              "type"
+            ],
+            "type": "object"
+          },
+          "objectType": {
+            "enum": [
+              "armor",
+              "chest",
+              "decoction",
+              "door",
+              "monster",
+              "player",
+              "potion",
+              "swordPart",
+              "weapon",
+              "table",
+              "trunk",
+              "cauldron",
+              "material",
+              "jewel",
+              "recipe"
+            ],
+            "type": "string"
+          },
+          "player": {
+            "additionalProperties": false,
+            "properties": {
+              "agility": {
+                "minimum": 1,
+                "type": "number"
+              },
+              "armor": {
+                "$ref": "#/properties/entities/items/properties/armor"
+              },
+              "currentHealth": {
+                "minimum": 1,
+                "type": "number"
+              },
+              "experience": {
+                "minimum": 0,
+                "type": "number"
+              },
+              "luck": {
+                "minimum": 1,
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "skillPoints": {
+                "minimum": 0,
+                "type": "number"
+              },
+              "strength": {
+                "minimum": 1,
+                "type": "number"
+              },
+              "vitality": {
+                "minimum": 1,
+                "type": "number"
+              },
+              "weapon": {
+                "$ref": "#/properties/entities/items/properties/weapon"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "type": "object"
+          },
+          "position": {
+            "$ref": "#/definitions/coordinate"
+          },
+          "potion": {
+            "additionalProperties": true,
+            "properties": {
+              "level": {
+                "$ref": "#/definitions/level"
+              }
+            },
+            "required": [
+              "level"
+            ],
+            "type": "object"
+          },
+          "swordPart": {
+            "additionalProperties": false,
+            "properties": {},
+            "type": "object"
+          },
+          "weapon": {
+            "additionalProperties": true,
+            "properties": {
+              "level": {
+                "enum": [
+                  1,
+                  10,
+                  2,
+                  3,
+                  4,
+                  42,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9
+                ],
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "range": {
+                "maximum": 6,
+                "minimum": 1,
+                "type": "number"
+              }
+            },
+            "required": [
+              "level",
+              "name",
+              "range"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "objectType",
+          "position"
+        ],
+        "type": "object"
+      },
+      "minItems": 25,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "rooms": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "level": {
+            "maximum": 8,
+            "minimum": 0,
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "tiles": {
+            "items": {
+              "$ref": "#/definitions/coordinate"
+            },
+            "type": "array",
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "level",
+          "name",
+          "tiles"
+        ],
+        "type": "object"
+      },
+      "maxItems": 9,
+      "minItems": 9,
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "entities",
+    "rooms"
+  ],
+  "type": "object"
+}

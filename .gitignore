@@ -1,0 +1,17 @@
+.idea/
+.gradle/
+build/
+gradle/
+docs/
+Entwurf/
+
+gradlew
+gradlew.bat
+
+*.jar
+
+.project
+
+.settings/
+
+*.log
